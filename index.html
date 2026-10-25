@@ -9,40 +9,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
-  
-<script>
-  const revealSections = document.querySelectorAll(
-    ".section, .comparison"
-  );
-
-  revealSections.forEach((section) => {
-    section.classList.add("section-reveal");
-  });
-
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    revealSections.forEach((section) => {
-      revealObserver.observe(section);
-    });
-  } else {
-    revealSections.forEach((section) => {
-      section.classList.add("is-visible");
-    });
-  }
-</script>
-
 <body>
 
 <header class="header">
@@ -62,8 +28,8 @@
       <h1>БЛЕСК,<br>КОТОРЫЙ <span>ЗАМЕТЕН.</span></h1>
       <p class="hero-text">Профессиональная полировка, защита кузова и безупречный уход за каждой деталью вашего автомобиля.</p>
       <div class="hero-buttons">
-     <a class="btn btn-orange" href="https://t.me/bubkababki" target="_blank" rel="noopener noreferrer">Записаться в Telegram ↗</a>
-<a class="btn btn-outline" href="#service-cards">Наши услуги</a>
+        <a class="btn btn-orange" href="https://t.me/bubkababki" target="_blank" rel="noopener noreferrer">Записаться в Telegram ↗</a>
+        <a class="btn btn-outline" href="#service-cards">Наши услуги</a>
       </div>
       <p class="hero-note">КАЖДАЯ ДЕТАЛЬ ИМЕЕТ ЗНАЧЕНИЕ</p>
     </div>
@@ -105,17 +71,11 @@
   <section class="gallery section" id="gallery">
     <p class="eyebrow">РЕЗУЛЬТАТ ВИДЕН СРАЗУ</p>
     <h2>МЕНЬШЕ ДЕФЕКТОВ.<br><span>БОЛЬШЕ БЛЕСКА.</span></h2>
-    <p class="gallery-intro">
-      Профессиональный уход за кузовом — внимание к каждой детали.
-    </p>
+    <p class="gallery-intro">Профессиональный уход за кузовом — внимание к каждой детали.</p>
 
     <div class="gallery-grid">
       <article class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85"
-          alt="Спортивный автомобиль в студийном освещении"
-          loading="lazy"
-        >
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=85" alt="Спортивный автомобиль в студийном освещении" loading="lazy">
         <div class="gallery-caption">
           <span class="gallery-tag">01 / EXTERIOR</span>
           <h3>Глубокий блеск кузова</h3>
@@ -124,11 +84,7 @@
       </article>
 
       <article class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85"
-          alt="Детали кузова премиального автомобиля"
-          loading="lazy"
-        >
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85" alt="Детали кузова премиального автомобиля" loading="lazy">
         <div class="gallery-caption">
           <span class="gallery-tag">02 / DETAIL</span>
           <h3>Внимание к деталям</h3>
@@ -137,11 +93,7 @@
       </article>
 
       <article class="gallery-card">
-        <img
-          src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=85"
-          alt="Автомобиль в процессе профессионального ухода"
-          loading="lazy"
-        >
+        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=85" alt="Автомобиль в процессе профессионального ухода" loading="lazy">
         <div class="gallery-caption">
           <span class="gallery-tag">03 / PROTECTION</span>
           <h3>Защита и уход</h3>
@@ -150,42 +102,25 @@
       </article>
     </div>
 
-    <p class="gallery-disclaimer">
-      Фотографии иллюстрируют услуги. Это не сравнительные снимки одной машины до и после.
-    </p>
+    <p class="gallery-disclaimer">Фотографии иллюстрируют услуги. Это не сравнительные снимки одной машины до и после.</p>
   </section>
 
-<section class="comparison section" id="comparison">
-  <p class="eyebrow">РЕЗУЛЬТАТ В ДЕТАЛЯХ</p>
-  <h2>ДО <span>/</span> ПОСЛЕ</h2>
-  <p class="comparison-text">Передвинь ползунок и сравни результат ухода за автомобилем.</p>
+  <section class="comparison section" id="comparison">
+    <p class="eyebrow">РЕЗУЛЬТАТ В ДЕТАЛЯХ</p>
+    <h2>ДО <span>/</span> ПОСЛЕ</h2>
+    <p class="comparison-text">Передвинь ползунок и сравни результат ухода за автомобилем.</p>
 
-  <div class="comparison-box">
-    <img
-      class="comparison-after"
-      src="./zac-nielson-CsZjHjFN3N8-unsplash.jpg"
-      alt="Автомобиль после ухода"
-    >
-    <div class="comparison-before">
-      <img
-        src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=80"
-        alt="Демонстрационный пример автомобиля до ухода"
-      >
+    <div class="comparison-box">
+      <img class="comparison-after" src="./zac-nielson-CsZjHjFN3N8-unsplash.jpg" alt="Демонстрационное изображение автомобиля после ухода">
+      <div class="comparison-before">
+        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=80" alt="Демонстрационный пример автомобиля до ухода">
+      </div>
+      <span class="comparison-label before-label">ДО</span>
+      <span class="comparison-label after-label">ПОСЛЕ</span>
+      <input class="comparison-slider" type="range" min="0" max="100" value="50" aria-label="Сравнить до и после">
+      <div class="comparison-divider"></div>
     </div>
-    <span class="comparison-label before-label">ДО</span>
-    <span class="comparison-label after-label">ПОСЛЕ</span>
-    <input
-      class="comparison-slider"
-      type="range"
-      min="0"
-      max="100"
-      value="50"
-      aria-label="Сравнить до и после"
-    >
-    <div class="comparison-divider"></div>
-  </div>
-</section>
-
+  </section>
 
   <section class="about section" id="about">
     <div class="about-photo"></div>
@@ -215,24 +150,59 @@
 </footer>
 
 <script>
+  // Ползунок «До / После»
   const comparison = document.querySelector(".comparison-box");
 
   if (comparison) {
     const slider = comparison.querySelector(".comparison-slider");
     const before = comparison.querySelector(".comparison-before");
     const divider = comparison.querySelector(".comparison-divider");
+    const beforeImage = comparison.querySelector(".comparison-before img");
 
     function updateComparison() {
       const value = slider.value + "%";
       before.style.width = value;
       divider.style.left = value;
+
+      // Подстраиваем ширину изображения под контейнер,
+      // чтобы сравнение правильно работало на телефонах.
+      beforeImage.style.width = comparison.clientWidth + "px";
     }
 
     slider.addEventListener("input", updateComparison);
+    window.addEventListener("resize", updateComparison);
     updateComparison();
+  }
+
+  // Появление секций при прокрутке.
+  // Если браузер не поддерживает IntersectionObserver,
+  // сайт останется видимым без анимации.
+  const revealSections = document.querySelectorAll(
+    ".section, .comparison"
+  );
+
+  if ("IntersectionObserver" in window) {
+    revealSections.forEach((section) => {
+      section.classList.add("section-reveal");
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealSections.forEach((section) => {
+      revealObserver.observe(section);
+    });
   }
 </script>
 
 </body>
 </html>
-
