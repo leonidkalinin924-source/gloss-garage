@@ -180,6 +180,25 @@
   <a href="#home">НАВЕРХ ↑</a>
 </footer>
 
+<script>
+  const comparison = document.querySelector(".comparison-box");
+
+  if (comparison) {
+    const slider = comparison.querySelector(".comparison-slider");
+    const before = comparison.querySelector(".comparison-before");
+    const divider = comparison.querySelector(".comparison-divider");
+
+    function updateComparison() {
+      const value = slider.value + "%";
+      before.style.width = value;
+      divider.style.left = value;
+    }
+
+    slider.addEventListener("input", updateComparison);
+    updateComparison();
+  }
+</script>
+
 </body>
 </html>
 
