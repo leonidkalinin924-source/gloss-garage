@@ -677,3 +677,35 @@ h2 {
   }
 }
 
+/* Плавные эффекты карточек услуг */
+.wash,
+.polish,
+.ceramic {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-size 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Эффект при наведении мыши */
+@media (hover: hover) and (pointer: fine) {
+  .wash:hover,
+  .polish:hover,
+  .ceramic:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 35px rgba(255, 106, 0, 0.22);
+    background-size: 110%;
+  }
+}
+
+/* Убираем резкие анимации, если они отключены в системе */
+@media (prefers-reduced-motion: reduce) {
+  .wash,
+  .polish,
+  .ceramic {
+    transition: none;
+  }
+}
+
