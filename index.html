@@ -9,6 +9,40 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
+  
+<script>
+  const revealSections = document.querySelectorAll(
+    ".section, .comparison"
+  );
+
+  revealSections.forEach((section) => {
+    section.classList.add("section-reveal");
+  });
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealSections.forEach((section) => {
+      revealObserver.observe(section);
+    });
+  } else {
+    revealSections.forEach((section) => {
+      section.classList.add("is-visible");
+    });
+  }
+</script>
+
 <body>
 
 <header class="header">
