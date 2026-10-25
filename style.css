@@ -216,9 +216,14 @@ h2 {
   background-image: url("https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=900&q=80");
 }
 
+
 .polish {
-  background-image: url("https://images.unsplash.com/photo-1613214150384-9b0e4f2a5f7d?auto=format&fit=crop&w=900&q=80");
+  background-image: url("https://images.unsplash.com/photo-q94A6k81lAQ?auto=format&fit=crop&w=900&q=80");
+  background-color: #252525;
+  background-position: center;
+  background-size: cover;
 }
+
 .ceramic {
   background-image: url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=80");
 }
